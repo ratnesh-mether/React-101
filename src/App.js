@@ -1,4 +1,5 @@
 import "./App.css";
+import FetchAPI from "./Concepts/FetchAPI";
 import {
   TextComponentOneWithHover,
   TextComponentTwoWithHover,
@@ -9,6 +10,7 @@ function App() {
     <div className="App">
       <TextComponentOneWithHover text="Hello"></TextComponentOneWithHover>
       <TextComponentTwoWithHover text="World"></TextComponentTwoWithHover>
+      <FetchAPI></FetchAPI>
     </div>
   );
 }
