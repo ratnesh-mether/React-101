@@ -8,6 +8,7 @@ import {
 function App() {
   return (
     <div className="App">
+      <h1>React-101</h1>
       <TextComponentOneWithHover text="Hello"></TextComponentOneWithHover>
       <TextComponentTwoWithHover text="World"></TextComponentTwoWithHover>
       <FetchAPI></FetchAPI>
