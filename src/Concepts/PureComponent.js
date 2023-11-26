@@ -1,4 +1,12 @@
-import React, { memo, useEffect, useState } from 'react';
+/**
+ * ----------------Pure Component-------------------------
+ * Pure component allows us to optimise performance by avoiding unnecessary rendering
+ * If the prop value doesn't change it will not re-render the component.
+ * It uses 'memo' to keep track of 'props'
+ * 'memo' is a higher order function which return a memoised  component.
+ */
+
+import React, { memo, useState } from 'react';
 
 const Container = memo(function PureComponentDemo({ stateOne, stateTwo }) {
     return <>

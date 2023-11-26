@@ -1,3 +1,9 @@
+/**
+ * ---------------Higher Order Component--------------------
+ * Higher component take a component as an argument and return a new enhanced component.
+ * It is used to reduce code redundancy.
+ */
+
 import React, { useState } from "react";
 
 function withHover(WrappedComponent) {

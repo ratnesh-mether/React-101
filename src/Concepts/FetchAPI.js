@@ -1,3 +1,13 @@
+/**
+ * -----------Fetch API-------------------
+ * Fetch API allows you to fetch the data from the server
+ * It is easy to use than 'XMLHttpRequest'
+ * There is one more alternative which is 'AXIOS';
+ * Fetch API return a promise.
+ * 
+ * NOTE : Always write the 'Fetch API' inside 'useEffect' hook
+ */
+
 import React, { useEffect, useState } from "react";
 
 function FetchAPI() {
