@@ -23,10 +23,11 @@ function withHover(WrappedComponent) {
   };
 }
 
-const TextComponentOne = ({ text, isHovered }) => {
+const TextComponentOne = ({ text, textOne, isHovered }) => {
   return (
     <>
       <h1 style={{ color: isHovered ? "Red" : "black" }}>{text}</h1>
+      <h1 style={{ color: isHovered ? "Red" : "black" }}>{textOne}</h1>
     </>
   );
 };

@@ -7,6 +7,7 @@
  */
 
 import React, { memo, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Container = memo(function PureComponentDemo({ stateOne, stateTwo }) {
     return <>
@@ -23,6 +24,12 @@ function PureComponent() {
         <button onClick={() => setStateOne(true)}>Update State One.</button>
         <button onClick={() => setStateTwo(!stateTwo)}>Update State Two.</button>
         <Container stateOne={stateOne} stateTwo={stateTwo} />
+        <Link to="/login">
+            <button>
+                Go to LogIn Page
+            </button>
+
+        </Link>
     </>
 }
 
