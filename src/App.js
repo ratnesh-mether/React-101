@@ -1,4 +1,4 @@
-import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 // import InputWriter from "./BasicApps/InputWriter";
 import LoginForm from "./BasicApps/LoginForm";
@@ -9,8 +9,17 @@ import LoginForm from "./BasicApps/LoginForm";
 // } from "./Concepts/Higher-Order-Component";
 import PureComponent from "./Concepts/PureComponent";
 import LoginSuccessful from "./BasicApps/LoginSuccessful";
+import { useEffect, useState } from "react";
+import Clock from "./BasicApps/Clock";
+import FetchData from "./BasicApps/FetchData";
 
 function App() {
+  // const [time, setTime] = useState(new Date());
+  let time = new Date();
+  useEffect(() => {
+    // setTime(new Date())
+    // time = new Date();
+  })
   return (
     <div className="App">
       <h1>React-101</h1>
@@ -18,8 +27,10 @@ function App() {
       <TextComponentTwoWithHover text="World" />
       <PureComponent />
       <InputWriter />
-      <FetchAPI></FetchAPI>
       */}
+      {/* <FetchAPI></FetchAPI> */}
+      <Clock time={time} />
+      <FetchData />
 
       <BrowserRouter>
         <Routes>

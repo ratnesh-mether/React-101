@@ -8,10 +8,9 @@
  * NOTE : Always write the 'Fetch API' inside 'useEffect' hook
  */
 
-import React, { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 function FetchAPI() {
-  const [data, setData] = useState();
   const url = "https://jsonplaceholder.typicode.com/posts?_limit=10";
   useEffect(() => {
     fetch(url)
