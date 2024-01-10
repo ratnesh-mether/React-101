@@ -32,13 +32,13 @@ function App() {
       <Clock time={time} />
       <FetchData />
 
-      <BrowserRouter>
+      {/* <BrowserRouter>
         <Routes>
           <Route path="/" element={<PureComponent />} />
           <Route path="/login" element={<LoginForm />} />
           <Route path="/success" element={<LoginSuccessful />} />
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter> */}
     </div>
   );
 }
