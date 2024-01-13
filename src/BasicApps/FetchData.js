@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+let flag = true;
+let count = 0;
 
 const FetchData = () => {
     const url = "https://jsonplaceholder.typicode.com/users";
@@ -11,6 +13,25 @@ const FetchData = () => {
     //         .then((response) => console.log(response))
     //         .catch((error) => console.log(error))
     // }, [])
+    useEffect(() => {
+        // const id = setTimeout(() => {
+        //     console.log(input)
+        // }, 3000)
+        // return (() => {
+        //     console.log("-------Debounced---------");
+        //     clearTimeout(id);
+        // })
+        if (flag) {
+            flag = false
+            console.log("---------Throttle " + count + "---------");
+            setTimeout(() => {
+                count++;
+                flag = true;
+            }, 2000)
+
+        }
+
+    }, [input])
     const fetchData = async () => {
         // try {
         //     const response = await fetch(url)
@@ -48,12 +69,15 @@ const FetchData = () => {
         const filteredData = data.filter(filteredData => filteredData.id > 5);
         return showData(filteredData);
     }
+    const callDebounce = (event) => {
+        setInput(event.target.value)
+    }
     return <div className='fetch-data'>
         <h1>Click Here to Fetch Data from API 👇</h1>
         <button onClick={fetchData}>Fetch Data</button><br />
-        <input type="text" onChange={(event) => setInput(event.target.value)} value={input} />
+        <input type="text" onChange={(event) => callDebounce(event)} value={input} />
         <div className="card-container">
-            {input ? filterInput() : displayData()}
+            {/*input ? filterInput() :*/ displayData()}
         </div>
     </div>
 }
