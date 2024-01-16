@@ -12,6 +12,7 @@ import LoginSuccessful from "./BasicApps/LoginSuccessful";
 import { useEffect, useState } from "react";
 import Clock from "./BasicApps/Clock";
 import FetchData from "./BasicApps/FetchData";
+import Table from "./BasicApps/Table";
 
 function App() {
   // const [time, setTime] = useState(new Date());
@@ -30,7 +31,8 @@ function App() {
       */}
       {/* <FetchAPI></FetchAPI> */}
       <Clock time={time} />
-      <FetchData />
+      {/* <FetchData /> */}
+      <Table />
 
       {/* <BrowserRouter>
         <Routes>

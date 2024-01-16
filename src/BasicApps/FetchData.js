@@ -14,22 +14,25 @@ const FetchData = () => {
     //         .catch((error) => console.log(error))
     // }, [])
     useEffect(() => {
-        // const id = setTimeout(() => {
-        //     console.log(input)
-        // }, 3000)
-        // return (() => {
-        //     console.log("-------Debounced---------");
-        //     clearTimeout(id);
-        // })
-        if (flag) {
-            flag = false
-            console.log("---------Throttle " + count + "---------");
-            setTimeout(() => {
-                count++;
-                flag = true;
-            }, 2000)
+        const id = setTimeout(() => {
+            fetch(url)
+                .then((response) => response.json())
+                .then((response) => console.log(response))
+                .catch((error) => console.log(error))
+        }, 3000)
+        return (() => {
+            console.log("-------Debounced---------");
+            clearTimeout(id);
+        })
+        // if (flag) {
+        //     flag = false
+        //     console.log("---------Throttle " + count + "---------");
+        //     setTimeout(() => {
+        //         count++;
+        //         flag = true;
+        //     }, 1000)
 
-        }
+        // }
 
     }, [input])
     const fetchData = async () => {
